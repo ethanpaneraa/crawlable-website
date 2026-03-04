@@ -1,0 +1,532 @@
+/* =============================================
+   Neon Genesis Evangelion Fan Site - style.css
+   ============================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #0a0a0f;
+  --bg-panel: #12121c;
+  --bg-card: #1a1a2e;
+  --accent-purple: #7b2fff;
+  --accent-orange: #ff6b00;
+  --accent-red: #c0392b;
+  --text-primary: #e8e8f0;
+  --text-secondary: #9090b0;
+  --text-muted: #555570;
+  --border: #2a2a45;
+  --glow-purple: rgba(123, 47, 255, 0.3);
+  --glow-orange: rgba(255, 107, 0, 0.3);
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ---- NAVIGATION ---- */
+nav {
+  background-color: var(--bg-panel);
+  border-bottom: 2px solid var(--accent-purple);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent-orange);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-logo span {
+  color: var(--accent-purple);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-orange);
+}
+
+/* ---- LAYOUT ---- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ---- HERO (index only) ---- */
+.hero {
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.hero-tag {
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--text-primary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 span {
+  color: var(--accent-purple);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-warning {
+  display: inline-block;
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  padding: 0.4rem 1.2rem;
+  text-transform: uppercase;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.65rem 1.8rem;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--accent-purple);
+  color: #fff;
+  border: 2px solid var(--accent-purple);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--accent-purple);
+  box-shadow: 0 0 12px var(--glow-purple);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent-orange);
+  border: 2px solid var(--accent-orange);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-orange);
+  color: #000;
+}
+
+/* ---- PAGE HEADER ---- */
+.page-header {
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.page-header .tag {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- SECTION TITLES ---- */
+.section-title {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  border-left: 3px solid var(--accent-purple);
+  padding-left: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---- CARDS ---- */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--accent-purple);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  color: var(--accent-orange);
+  margin-bottom: 0.3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card .meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ---- CHARACTER CARDS ---- */
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.char-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.char-card:hover {
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 20px var(--glow-purple);
+}
+
+.char-name {
+  font-size: 1.1rem;
+  color: var(--accent-orange);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.char-designation {
+  font-size: 0.7rem;
+  color: var(--accent-purple);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.char-stat {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.char-stat:last-of-type {
+  border-bottom: none;
+}
+
+.char-stat .label {
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.char-bio {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ---- EPISODE LIST ---- */
+.episode-list {
+  list-style: none;
+}
+
+.episode-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+  background-color: var(--bg-card);
+  transition: border-color 0.2s;
+}
+
+.episode-item:hover {
+  border-color: var(--accent-orange);
+}
+
+.ep-num {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  font-weight: bold;
+  min-width: 2.5rem;
+  line-height: 1;
+  padding-top: 0.2rem;
+}
+
+.ep-info h3 {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.ep-info .ep-meta {
+  font-size: 0.7rem;
+  color: var(--accent-purple);
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+}
+
+.ep-info p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* ---- LORE SECTIONS ---- */
+.lore-block {
+  margin-bottom: 3rem;
+}
+
+.lore-block h2 {
+  font-size: 1rem;
+  color: var(--accent-orange);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.lore-block p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.lore-block ul {
+  list-style: none;
+  margin: 0.75rem 0;
+}
+
+.lore-block ul li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 0.3rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent-purple);
+  margin-bottom: 0.4rem;
+}
+
+/* ---- INFO TABLE ---- */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin: 1rem 0;
+}
+
+.info-table th {
+  text-align: left;
+  color: var(--accent-purple);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.info-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.info-table tr:hover td {
+  color: var(--text-primary);
+  background-color: rgba(123, 47, 255, 0.05);
+}
+
+/* ---- ABOUT PAGE ---- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.about-card h3 {
+  font-size: 0.75rem;
+  color: var(--accent-orange);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.about-card p,
+.about-card li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.about-card ul {
+  list-style: none;
+}
+
+.about-card ul li {
+  padding: 0.25rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+  margin-bottom: 0.3rem;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  margin-top: 4rem;
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-panel);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+footer a {
+  color: var(--accent-purple);
+  text-decoration: none;
+}
+
+footer .footer-note {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+/* ---- DIVIDER ---- */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* ---- HIGHLIGHT BOX ---- */
+.highlight-box {
+  border: 1px solid var(--accent-purple);
+  padding: 1rem 1.25rem;
+  background-color: rgba(123, 47, 255, 0.06);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 1.5rem 0;
+}
+
+.highlight-box strong {
+  color: var(--accent-orange);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+}
